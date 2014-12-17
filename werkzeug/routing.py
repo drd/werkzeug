@@ -717,7 +717,7 @@ class Rule(RuleFactory):
                     return
                 processed.add(data)
             else:
-                add(url_quote(to_bytes(data, self.map.charset), safe='/:|+'))
+                add(url_quote(to_bytes(data, self.map.charset), safe='/:|+#'))
         domain_part, url = (u''.join(tmp)).split(u'|', 1)
 
         if append_unknown:
